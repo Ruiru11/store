@@ -1,0 +1,102 @@
+.login{
+	width: 400px;
+	height: 450px;
+	background-image:url('../img/grey.jpg');
+	color: #fff;
+	top: 20%;
+	left: 35%;
+	position: absolute;
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	padding: 70px 30px;
+
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-image:url('../img/dark.jpg');
+	background-repeat: no-repeat;
+	background-position: cover;
+	background-size: cover;
+	font-family: sans-serif;
+}
+h2{
+	font-size: 50px;
+	font-weight: bold;
+	color: orange;
+	text-align: center;
+}
+h1{
+	margin: 0;
+	padding: 0 0 30px;
+	text-align: center;
+	font-size: 40px;
+	color: blue;
+}
+
+.login p{
+	margin: 0;
+	padding: 0;
+	font-weight: bolder;
+	color: black;
+}
+
+.login input{
+	width: 100%
+	margin-bottom: 20px;
+}
+
+.login input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 2px solid black;
+	background: transparent;
+	outline: none;
+	height: 50px;
+	font-size: 15px;
+
+}	
+
+.login a{
+	position: absolute;
+	top:80%;
+	left: 5%;
+	color: blue;
+}
+
+
+.login a:hover
+{
+	cursor: pointer;
+}
+
+.new{
+	width: 100px;
+	height: 100px;
+	border-radius: 20%;
+	position: absolute;
+	top: -3%;
+	left: 35%;
+}
+
+.login button{
+	position: absolute;
+	left: 200px;
+	width: 150px;
+	height: 50px;
+	background-color:#32cd32;
+	color: white;
+	border-radius: 10px;
+	font-family: sans-serif;
+	font-weight: bolder;
+}
+.login button:hover{
+	cursor: pointer;
+
+}
+footer{
+	position: fixed;bottom: 0;
+	width: 100%;
+	display: block;
+}
