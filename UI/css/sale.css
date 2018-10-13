@@ -40,6 +40,11 @@
 .table th{
 	font-size:30px;
 	background-color: green;
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+.table tr{
+	background-color: grey;
 }
 
 .sales{
