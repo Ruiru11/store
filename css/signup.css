@@ -94,11 +94,3 @@ footer{
 	background-color: green;
 }
 
-.sg-form button{
-	height: 30px;
-	width: 70px;
-	border:2px;
-	border-radius: 2px;
-	cursor: pointer;
-	color: blue;
-}
