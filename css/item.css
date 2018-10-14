@@ -1,0 +1,86 @@
+body{
+	background-color: grey;
+}
+
+body h1{
+	font-size: 35px;
+	color:black;
+	text-align:center;
+}
+
+.container{
+	width: 400px;
+	height: 450px;
+	color: #fff;
+	background-image:url("../img/cover.jpg");
+	top: 20%;
+	left: 5%;
+	position: absolute;
+	box-sizing: border-box;
+	padding: 70px 30px;
+}
+
+.container input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.container input[type="text"]
+{
+	border: solid;
+	border-radius:5px;
+	border-bottom: 2px solid black;
+	background: white;
+	outline: none;
+	height: 20px;
+	font-size: 12px;
+	font-style:italic;
+
+}
+
+.container input[type="submit"]{
+	position: absolute;
+	left: 200px;
+	width: 150px;
+	height: 50px;
+	background-color:black;
+	color: white;
+	border-radius: 10px;
+	font-family: sans-serif;
+	font-weight: bolder;
+}
+
+.container input[type="file"]{
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+	font-family: sans-serif;
+	font-weight: bolder;
+}
+
+.nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+}
+
+.nav li{
+	float: left;
+}
+
+.nav li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 20px 25px;
+	text-decoration: none;
+}
+.nav li a:hover{
+	background-color: blue;
+}
+.active{
+	background-color: green;
+}
+

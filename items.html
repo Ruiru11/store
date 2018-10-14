@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wakand Stores</title>
+	<link rel="stylesheet" type="text/css" href="css/item.css">
+</head>
+<body>
+	<nav class="nav">
+		<ul>
+			<li><a class="active" href="">Item Upload</a></li>
+			<li><a href="index.html">Home</a></li>
+		</ul>
+	</nav>
+	<h1>Adding items to the shopping cart</h1>
+	<div class="container">		
+		<form  action="index.html" method="post" enctype="multipart/form=data">
+			<label for="file">Chose image of item to add to cart</label>
+			<input type="file" name="file"/>
+			<input type="text" name="description" placeholder="description of item to upload">
+			<input type="text" name="price" placeholder="price of item">
+			<input type="submit" value="click to upload">
+		</form>
+	</div>
+</body>
+</html>
