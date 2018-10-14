@@ -2,7 +2,7 @@
 	width: 500px;
 	height: 550px;
 	background-image:url('../img/grey.jpg');
-	background-size:contain;
+	background-size:cover;
 	color: #fff;
 	top: 15%;
 	left: 35%;
@@ -16,9 +16,7 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-image:url('../img/dark.jpg');
-	background-repeat: no-repeat;
-	background-position: cover;
+	background:url('../img/dark.jpg') no-repeat center center fixed;
 	background-size: cover;
 	font-family: sans-serif;
 }
