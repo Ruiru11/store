@@ -18,9 +18,15 @@ body h1{
 	align-self: flex-end;
 }
 
-.collection-sort{
+.category{
 	display: flex;
 	flex-direction: column;
+}
+
+.category label{
+	width: 30px;
+	height: 20px;
+	font-size:20px;
 }
 
 .items{
