@@ -3,12 +3,12 @@
 > Helps store attendants and owners run a store effectively
 
 
-#NOTE:
->This are just designs.
->Core functionalitty not enabled.
->All data is dummy data
+# NOTE:
+> This are just designs.
+> Core functionalitty not enabled.
+> All data is dummy data
 
-##Viewing the pages online:
+## Viewing the pages online:
 >Site has been published at https://ruiru11.github.io/store/
 
 ## Clonning the repo
