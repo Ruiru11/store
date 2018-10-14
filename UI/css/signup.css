@@ -93,3 +93,11 @@ footer{
 .active{
 	background-color: green;
 }
+.sg-form button{
+	height: 30px;
+	width: 80px;
+	border:2px;
+	border-radius:2px;
+	background:blue;
+	cursor: pointer;
+}
