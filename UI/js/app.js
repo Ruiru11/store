@@ -16,13 +16,19 @@ function gtuser(e){
     })
     .then(res=> res.json())
     .then(function (data) {
-        let result = token(data);
-        let div = document.getElementById('not');
-        div.innerHTML = result;
-        setTimeout(()=>{
+        if (data.message === 'Sign in successful' ){
+            window.location.href='index.html'
+        }
+        else{
+            let result = token(data);
+            let div = document.getElementById('not');
+            div.innerHTML = result;
+            setTimeout(()=>{
             result = '';
             document.innerHTML = result;
         })
+        }
+        
     })
 }
 function token(res){

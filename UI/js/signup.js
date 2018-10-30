@@ -22,11 +22,11 @@ function lguser(e){
         div.innerHTML = result;
         setTimeout(()=>{
             result = '';
-            document.innerHTML = result;
-        })
+            div.innerHTML = result;
+        },8000)
     })
 }
 function token(res){
-    localStorage.setItem('token',res.token);
+    localStorage.setItem('token',res.token); 
     return`<h2>${res.message}<h2>`
 }
