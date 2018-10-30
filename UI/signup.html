@@ -10,6 +10,7 @@
 		<ul>
 			<li><a class="active" href="">Attendant Regestration</a></li>
 			<li><a href="index.html">Home</a></li>
+			<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		</ul>
 	</nav>
 	<h2><strong>WAKANDA STORES </strong></h2>
@@ -17,21 +18,20 @@
 		<div class="title"> 
 			<h1>CREATE USER</h1>
 		</div>
-		<div class="sg-form">
+		<div id="new"></div>
+		<form id="fm" class="sg-form">
 			<p>Email:</p>
-			<input type="text" placeholder="email">
-			<p>Username:</p>
-			<input type="text" placeholder="Username">
+			<input id="email" type="text" placeholder="email">
 			<p>Password:</p>
-			<input type="password" placeholder="password">
-			<p>Confirm Password:</p>
-			<input type="password" placeholder=" confirm password">
-			<input type="button" value="create" class="login-button">
+			<input id="password" type="password" placeholder="password">
+			<input type="submit" value="create" class="login-button">
 			<p>Got an account already?</p>
 			<a href="login.html">
 				<button>Login</button>
 			</a>
-		</div>
+		</form>
 	</div>
+
+<script src="js/signup.js" ></script>
 </body>
 </html>
