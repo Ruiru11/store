@@ -4,6 +4,7 @@
 	<title>Wakanda stores</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 </head>
 <body>
 	<h2><strong>WAKANDA STORES </strong></h2>
@@ -11,14 +12,16 @@
 		<div class="title"> 
 			<h1>Login</h1>
 		</div>
-		<div class="lg-form">
+		<div id="not"></div>
+		<form id="lg">
 			<p>Email:</p>
-			<input type="text" placeholder="email">
+			<input id="email" type="text" placeholder="email">
 			<p>Password:</p>
-			<input type="password" placeholder="password">
-			<input type="button" value="login" class="login-button">
-		</div>
+			<input id="password" type="password" placeholder="password">
+			<input type="submit" value="login" class="login-button">
+		</form>
 	</div>
 <footer>Copyright 2018 All Rights Reseverd Ruiru</footer>
+<script src="js/app.js" ></script>
 </body>
 </html>
