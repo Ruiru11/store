@@ -13,7 +13,6 @@ function lguser(e){
             email:email,
             password:password
         })
-        
     })
     .then(res=> res.json())
     .then(function (data) {
@@ -26,7 +25,6 @@ function lguser(e){
         },8000)
     })
 }
-function token(res){
-    localStorage.setItem('token',res.token); 
-    return`<h2>${res.message}<h2>`
+function token(res){ 
+    return`<h3>${res.message}<h3>`
 }

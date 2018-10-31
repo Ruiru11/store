@@ -17,10 +17,10 @@ function gtuser(e){
     .then(res=> res.json())
     .then(function (data) {
         if (data.message === 'Sign in successful' ){
-            window.location.href='index.html'
+           let result = token(data);
+           window.location.href='index.html'
         }
         else{
-            let result = token(data);
             let div = document.getElementById('not');
             div.innerHTML = result;
             setTimeout(()=>{
