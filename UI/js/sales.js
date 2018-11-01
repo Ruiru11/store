@@ -6,6 +6,13 @@ window.onload = function getsales(){
     })
     .then((res)=> res.json())
     .then(function (data) {
+        let result = message(data);
+        let div = document.getElementById('new');
+        div.innerHTML = result;
+        setTimeout(()=>{
+            result = '';
+            div.innerHTML = result;
+        },8000)
         console.log(data);
         ol = document.getElementById('sales');
         let sales = data.sales;
