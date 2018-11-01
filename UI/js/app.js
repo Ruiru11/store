@@ -21,12 +21,13 @@ function gtuser(e){
            window.location.href='index.html'
         }
         else{
+            let result = token(data);
             let div = document.getElementById('not');
             div.innerHTML = result;
             setTimeout(()=>{
             result = '';
             document.innerHTML = result;
-        })
+        },8000)
         }
         
     })

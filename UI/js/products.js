@@ -19,7 +19,7 @@ window.onload = function getprods(){
             h1.innerHTML = `Product Name:${product.product_name}`;
             h5.innerHTML = `Product Id:${product.product_id}`;
             p.innerHTML = `Product Description:${product.description}`;
-            h3.innerHTML =`Product price:${product.price}`;
+            h3.innerHTML =`Product price:${product.price}ksh`;
             h4.innerHTML  =`Product Category:${product.category_name}`;
             inject(li, h1);
             inject(li, h5);
