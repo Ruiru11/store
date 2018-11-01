@@ -11,17 +11,17 @@ window.onload = function getprods(){
         let products = data.products;
         return products.map(function(product){
             let li = createNode('li'),
-                h1 = createNode('h1'),
+                h2 = createNode('h2'),
                 h5 = createNode('h5'),
                 p  = createNode('p'),
                 h3 = createNode('h3'),
                 h4 = createNode('h4');
-            h1.innerHTML = `Product Name:${product.product_name}`;
+            h2.innerHTML = `Product Name:${product.product_name}`;
             h5.innerHTML = `Product Id:${product.product_id}`;
             p.innerHTML = `Product Description:${product.description}`;
             h3.innerHTML =`Product price:${product.price}ksh`;
             h4.innerHTML  =`Product Category:${product.category_name}`;
-            inject(li, h1);
+            inject(li, h2);
             inject(li, h5);
             inject(li, p);
             inject(li, h3);

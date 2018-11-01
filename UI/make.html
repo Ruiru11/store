@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Wakanda Stores</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/make.css">
 </head>
 <body>
@@ -11,76 +12,21 @@
 			<li><a href="index.html">Home</a></li>
 		</ul>
 	</nav>
-	<h4>Create New items</h4>	
-		<form  action="add.html" method="post" enctype="multipart/form=data">
-			<label for="file">Chose image of item to add to cart</label>
-			<input type="file" name="file"/>
-			<input type="text" name="description" placeholder="description of item to upload">
-			<input type="text" name="price" placeholder="price of item">
-			<input type="submit" value="click to upload">
+	<div id="send" class="snd"></div>
+	<div class="fm"></div>
+	<h4>Create New products</h4>	
+		<form id="mke" class="sg-form">
+			<p>Name:</p>
+			<input id="name" type="text" placeholder="name">
+			<p>Price:</p>
+			<input id="price" type="text" placeholder="Price">
+			<p>Category</p>
+			<input id="category" type="text" placeholder="Category">
+			<P>Description</P>
+			<input id="descritpion" type="text" placeholder="Description">
+			<input type="submit" value="create" class="crete-button">
 		</form>
-	<h1>Edit Items in Store</h1>
-	<section class="items">
-		<div class="items-card">
-			<div class="items-image">
-				<img src="img/tape.jpg">
-			</div>
-			<div class="items-info">
-				<h3>Nail Gun</h3>
-				<a href="">
-					<button>Delete Item</button>
-
-				</a>
-				<a href="">
-					<button>Edit Name</button>
-				</a>
-			</div>
-		</div>
-		<div class="items-card">
-			<div class="items-image">
-				<img src="img/paint.png">
-			</div>
-			<div class="items-info">
-				<h3>Nail Gun</h3>
-				<a href="">
-					<button>Delete Item</button>
-
-				</a>
-				<a href="">
-					<button>Edit Name</button>
-				</a>
-			</div>
-		</div>
-		<div class="items-card">
-			<div class="items-image">
-				<img src="img/spade.jpg">
-			</div>
-			<div class="items-info">
-				<h3>Nail Gun</h3>
-				<a href="">
-					<button>Delete Item</button>
-
-				</a>
-				<a href="">
-					<button>Edit Name</button>
-				</a>
-			</div>
-		</div>
-		<div class="items-card">
-			<div class="items-image">
-				<img src="img/nail.jpg">
-			</div>
-			<div class="items-info">
-				<h3>Nail Gun</h3>
-				<a href="">
-					<button>Delete Item</button>
-
-				</a>
-				<a href="">
-					<button>Edit Name</button>
-				</a>
-			</div>
-		</div>
-	</section>
+	</div>
+<script src="js/make.js" ></script>
 </body>
 </html>

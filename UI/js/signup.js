@@ -16,6 +16,9 @@ function lguser(e){
     })
     .then(res=> res.json())
     .then(function (data) {
+        if (data.status === 'pass'){
+            window.location.href='login.html'
+        }
         let result = token(data);
         let div = document.getElementById('new');
         div.innerHTML = result;
