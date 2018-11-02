@@ -3,6 +3,7 @@ function lguser(e){
     e.preventDefault();
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
+    let confirm_password = document.getElementById('confirm_password').value
     fetch('https://njeri.herokuapp.com/api/v2/signup',{
         method:'POST',
         headers:{
@@ -29,5 +30,19 @@ function lguser(e){
     })
 }
 function token(res){ 
-    return`<h3>${res.message}<h3>`
+    return`<h1 style='color:red'>${res.message}<h1>`
 }
+
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;

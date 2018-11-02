@@ -34,5 +34,5 @@ function gtuser(e){
 }
 function token(res){
     localStorage.setItem('token',res.token);
-    return`<h2>${res.message}<h2>`
+    return`<h1 style='color:red'>${res.message}<h1>`
 }

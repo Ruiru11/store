@@ -6,6 +6,7 @@ window.onload = function getsales(){
     })
     .then((res)=> res.json())
     .then(function (data) {
+        console.log(data)
         let result = message(data);
         let div = document.getElementById('new');
         div.innerHTML = result;
@@ -19,17 +20,17 @@ window.onload = function getsales(){
         return sales.map(function(sale){
             let li = createNode('li'),
                 h1 = createNode('h1'),
+                p = createNode('p'),
                 h4 = createNode('h4'),
-                h3 = createNode('h3'),
-                p = createNode('p');
-            h1.innerHTML = `Sale Id:${sale.sale_id}`;
+                h3 = createNode('h3');
+            h1.innerHTML  =`Sale Items:${sale.description}`;
+            p.innerHTML = `Sale Id:${sale.sale_id}`;
             h4.innerHTML = `User Id:${sale.user_id}`;
             h3.innerHTML =`Sale Cost:${sale.cost}ksh`;
-            p.innerHTML  =`Sale Items:${sale.description}`;
             inject(li, h1);
+            inject(li, p);
             inject(li, h4);
             inject(li, h3);
-            inject(li, p);
             inject(ol, li);
         })
 

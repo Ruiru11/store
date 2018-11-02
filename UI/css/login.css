@@ -67,3 +67,14 @@ footer{
 	width: 100%;
 	display: block;
 }
+#submit {
+ color:white;
+ width: 135px;
+ height: 40px;
+ margin: 0;
+ padding: 0;
+ background:black;
+ border-radius: 2em;
+ cursor: pointer;
+ font-size: 22px; 
+}
