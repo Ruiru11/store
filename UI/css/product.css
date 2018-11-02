@@ -111,3 +111,11 @@ h1{
 }
 
 /* Add some padding inside the card container */
+
+.search
+{
+   position:relative;
+   float:right;
+   height: 50px;
+}
+
