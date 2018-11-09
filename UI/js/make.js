@@ -32,6 +32,9 @@ function pstpd(e){
             div.innerHTML = result;
         },10000)
     })
+    .catch(function(err){
+        console.log(err)
+    })
 }
 
 function message(res){

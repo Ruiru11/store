@@ -1,46 +1,51 @@
-window.onload = function getprods(){
-    fetch('https://njeri.herokuapp.com/api/v2/products',{
-        headers:{
-            'Authorization': localStorage.getItem('token')
-        },  
+window.onload = function getprods() {
+  fetch("https://njeri.herokuapp.com/api/v2/products", {
+      headers: {
+      Authorization: localStorage.getItem("token")
+    }
+  })
+    .then(res => res.json())
+    .then(function(data) {
+      const products = data.products;
+      console.log("product", products);
+      const productTable = `<div>
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Descriptiom</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>View</th>
+              </tr>
+              ${products.map(
+                product =>
+                  `<tr>
+                  <td>${product.product_name}</td>
+                  <td>${product.description}</td>
+                  <td>${product.price}</td>
+                  <td>${product.category_name}</td>
+                  <td><button  name="producr" id=${
+                    product.product_id
+                  }>View</button></td>
+                </tr>`
+              )}
+            </table>
+          </div>`;
+
+      (body = document.getElementsByTagName("body")[0]),
+      (div = document.createElement("div"));
+      div.innerHTML = productTable;
+      body.appendChild(div);
     })
-    .then((res)=> res.json())
-    .then(function (data) {
-        console.log(data);
-        ul = document.getElementById('products');
-        let products = data.products;
-        return products.map(function(product){
-            let li = createNode('li'),
-                h2 = createNode('h2'),
-                h5 = createNode('h5'),
-                p  = createNode('p'),
-                h3 = createNode('h3'),
-                h4 = createNode('h4');
-            h2.innerHTML = `Product Name:${product.product_name}`;
-            h5.innerHTML = `Product Id:${product.product_id}`;
-            p.innerHTML = `Product Description:${product.description}`;
-            h3.innerHTML =`Product price:${product.price}ksh`;
-            h4.innerHTML  =`Product Category:${product.category_name}`;
-            inject(li, h2);
-            inject(li, h5);
-            inject(li, p);
-            inject(li, h3);
-            inject(li, h4);
-            inject(ul, li);
-        })
+    .catch(function(error) {
+      console.log(error);
+    });
+};
 
-    })
-    .catch(function(error){
-        console.log(error)
-    })
+let butonn = document.getElementsByName("producr")
+butonn.addEventListener('submit', viewProduct);
+
+function viewProduct() {
+  let product_id = document.getElementsByName("producr");
+  console.log(">>>>>>>>>>>>>>>", product_id);
 }
-
-function createNode(el){
-    return document.createElement(el);
-}
-
-function inject(p, c){
-    return p.appendChild(c);
-}
-
-
