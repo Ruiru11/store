@@ -24,32 +24,20 @@
 	background-color: green;
 }
 
-.table{
-	font-family: sans-serif;
-	border-collapse: collapse;
-	width: 80%;
-	text-align: center;
-	font-style:italic;
-	font-weight:bold;
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.table td,th{
-	border:2px solid black;
-
-}
-.table th{
-	font-size:30px;
-	background-color: green;
-	padding-bottom: 12px;
-	padding-top: 12px;
-}
-.table tr{
-	background-color: grey;
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
 
-.sales{
-	background-color:grey;
-	padding:30px;
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
 
 

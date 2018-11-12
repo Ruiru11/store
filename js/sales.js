@@ -6,33 +6,48 @@ window.onload = function getsales(){
     })
     .then((res)=> res.json())
     .then(function (data) {
-        console.log(data)
         let result = message(data);
-        let div = document.getElementById('new');
+        console.log(">>>..",result)
+        if(data.message === 'Un-authorized Access only Admin allowed' ){
+            let div = document.getElementById('send');
         div.innerHTML = result;
         setTimeout(()=>{
             result = '';
             div.innerHTML = result;
-        },8000)
-        console.log(data);
-        ol = document.getElementById('sales');
-        let sales = data.sales;
-        return sales.map(function(sale){
-            let li = createNode('li'),
-                h1 = createNode('h1'),
-                p = createNode('p'),
-                h4 = createNode('h4'),
-                h3 = createNode('h3');
-            h1.innerHTML  =`Sale Items:${sale.description}`;
-            p.innerHTML = `Sale Id:${sale.sale_id}`;
-            h4.innerHTML = `User Id:${sale.user_id}`;
-            h3.innerHTML =`Sale Cost:${sale.cost}ksh`;
-            inject(li, h1);
-            inject(li, p);
-            inject(li, h4);
-            inject(li, h3);
-            inject(ol, li);
-        })
+        },10000)
+        alert("contact admin to view this page");
+        window.location.href='login.html'
+        }
+        else{
+             const sales = data.sales;
+        console.log("sale", sales);
+        const salesTable = `<div>
+            <table>
+              <tr>
+                <th>sale_id</th>
+                <th>user_id</th>
+                <th>cost</th>
+                <th>description</th>
+              </tr>
+              ${sales.map(
+                sale =>
+                  `<tr>
+                  <td>${sale.sale_id}</td>
+                  <td>${sale.user_id}</td>
+                  <td>${sale.cost}</td>
+                  <td>${sale.description}</td>
+                </tr>`
+              )}
+            </table>
+          </div>`;
+
+      (body = document.getElementsByTagName("body")[0]),
+      (div = document.createElement("div"));
+      div.innerHTML = salesTable;
+      body.appendChild(div);
+        }
+        
+       
 
     })
     .catch(function(error){
@@ -40,13 +55,6 @@ window.onload = function getsales(){
     })
 }
 
-function createNode(el){
-    return document.createElement(el);
-}
-
-function inject(p, c){
-    return p.appendChild(c);
-}
 function message(res){
     return`<h2>${res.message}<h2>`
 }
