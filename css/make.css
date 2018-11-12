@@ -103,5 +103,39 @@ h4{
 	font-style: italic;
 	color:green;
 }
+.sg-form input[type="text"]{
+	height: 30px;
+	max-width: 400px;
+	width: 80%;
+	line-height: 5em;
+	font-family: sans-serif;
+	margin: 1em ,2em;
+	border-radius:5px;
+	padding-left: 10px;
+	border-color: blue;
+}
+.sg-form input[type="submit"]{
+	height: 40px;
+	width: 130px;
+	background:green;
+	border:2px ;
+	border-radius: 30px;
+	color: white;
+	font-family: sans-serif;
+	cursor: pointer;
+}
 
+.fm{
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+.snd{
+	margin:5px 15px;
+    font-size:1em;
+	vertical-align:middle;
+	border: 2px;
+	border-radius: 15px;
+	height: 50px;
+}
 
