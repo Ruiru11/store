@@ -16,7 +16,7 @@ window.onload = function getsales(){
             div.innerHTML = result;
         },10000)
         alert("contact admin to view this page");
-        window.location.href='login.html'
+        window.location.href='index.html'
         }
         else{
              const sales = data.sales;
