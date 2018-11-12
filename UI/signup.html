@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Wakanda Stores</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/signup.css">
 </head>
 <body>
@@ -9,24 +10,30 @@
 		<ul>
 			<li><a class="active" href="">Attendant Regestration</a></li>
 			<li><a href="index.html">Home</a></li>
+			<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		</ul>
 	</nav>
 	<h2><strong>WAKANDA STORES </strong></h2>
-	<div class="signup">
-		<h1>Create new Attendant Account </h1>
-		<form>
-			<p>email</p>
-			<input type="text" name="email" placeholder="Enter email">
-			<p>password</p>
-			<input type="password" name="password" placeholder="Enter password">
-			<p>Confirm password</p>
-			<input type="password" name="Confirm password" placeholder="Confirm password">
-			<p>username</p>
-			<input type="text" name="username" placeholder="Enter username">
-			<a href="#" id="signup">
-				<button>Create Account</button>
+	<div class="signup"> 
+		<div class="title"> 
+			<h1>CREATE USER</h1>
+		</div>
+		<div id="new"></div>
+		<form id="fm" class="sg-form">
+			<p>Email:</p>
+			<input id="email" type="text" placeholder="email">
+			<p>Password:</p>
+			<input id="password" type="password" placeholder="password">
+			<p>Confirm Password</p>
+			<input id="confirm_password" type="password" placeholder="confirm_password" ">
+			<input type="submit" value="create user" id="submit">
+			<p>Got an account already?</p>
+			<a href="login.html">
+				<button>Login</button>
 			</a>
 		</form>
 	</div>
+
+<script src="js/signup.js" ></script>
 </body>
 </html>
