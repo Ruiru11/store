@@ -19,7 +19,7 @@ function mksale(e){
     .then(function (data) {
          console.log(data);
         if (data.satus === 'pass'){
-            window.location.href='sales.html'
+            alert("Sale was created");
         }
         let result = message(data);
         let div = document.getElementById('make');
