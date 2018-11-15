@@ -7,7 +7,7 @@ window.onload = function getsales(){
     .then((res)=> res.json())
     .then(function (data) {
         let result = message(data);
-        console.log(">>>..",result)
+        console.log("error message",result);
         if(data.message === 'Un-authorized Access only Admin allowed' ){
             let div = document.getElementById('send');
         div.innerHTML = result;
@@ -26,6 +26,7 @@ window.onload = function getsales(){
               <tr>
                 <th>sale_id</th>
                 <th>user_id</th>
+                <th>user_email</th>
                 <th>cost</th>
                 <th>description</th>
               </tr>
@@ -34,6 +35,7 @@ window.onload = function getsales(){
                   `<tr>
                   <td>${sale.sale_id}</td>
                   <td>${sale.user_id}</td>
+                  <td>${sale.email}</td>
                   <td>${sale.cost}</td>
                   <td>${sale.description}</td>
                 </tr>`
@@ -51,7 +53,7 @@ window.onload = function getsales(){
 
     })
     .catch(function(error){
-       return`<h1>&{error.message</h2>`
+       return`<h1>&{error.message</h1>`
     })
 }
 

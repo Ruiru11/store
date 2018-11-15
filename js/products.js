@@ -15,6 +15,7 @@ window.onload = function getprods() {
                 <th>Descriptiom</th>
                 <th>Price</th>
                 <th>Category</th>
+                <th>product_id</th>
               </tr>
               ${products.map(
                 product =>
@@ -23,6 +24,7 @@ window.onload = function getprods() {
                   <td>${product.description}</td>
                   <td>${product.price}</td>
                   <td>${product.category_name}</td>
+                  <td>${product.product_id}</td>
                 </tr>`
               )}
             </table>

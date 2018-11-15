@@ -34,7 +34,7 @@ function mksale(e){
 function message(res){
     if(res.satus === 'pass') {
         return`<h1 style='color:green'> Sale order made created</h1>` 
-    }else if(res.message === 'cost cannot be negative'){
+    }else if(res.message === 'cost cannot be negative' || 'one of the items you are trying to make a sale of is not in store please check again' ){
         return`<h1 style='color:red'>${res.message}</h1>'`
     }
 }
