@@ -28,7 +28,7 @@
 	position: relative;
 	width: 150px;
 	height: 30px;
-	background-color:blue;
+	background-color:lime;
 	color: white;
 	border-radius: 10px;
 	font-family: sans-serif;
@@ -39,7 +39,9 @@
 	background-color: green;
 }
 body{
-	background-color: grey;
+	background:url("../img/home.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 h1{
@@ -61,4 +63,9 @@ li{
    position:relative;
    float:right;
    height: 50px;
+   cursor: pointer;
+   
+
 }
+
+

@@ -36,3 +36,5 @@ function token(res){
     localStorage.setItem('token',res.token);
     return`<h1 style='color:red'>${res.message}<h1>`
 }
+
+
