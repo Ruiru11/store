@@ -37,7 +37,7 @@ if(jwtDecoded.role ==="admin"){
    
 }
 if(token ===null){
-	alert("You need to login to if you are an admin or an attendant");
+	alert("You need to login  if you are an admin or an attendant");
 }
 
 
