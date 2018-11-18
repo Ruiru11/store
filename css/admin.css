@@ -58,14 +58,16 @@ li{
 	font-size: 17px;
 	font-weight: bold;
 }
+
+
 .logout
 {
    position:relative;
    float:right;
-   height: 50px;
+   height: 60px;
    cursor: pointer;
-   
-
+   border-radius: 4px;
 }
+
 
 
