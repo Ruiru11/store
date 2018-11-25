@@ -196,10 +196,12 @@ input[type=tel], select {
 }
 .del {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    max-width: 500px;
+    max-height: 200px;
     margin: auto;
     text-align: center;
     background-color:red;
-    display: inline-block;
-     margin: 0 0 0 10px;
+    display: block;
+    margin: 0 0 0 15px;
+    border-radius: 5px;
 }

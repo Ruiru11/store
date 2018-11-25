@@ -115,22 +115,30 @@ h1{
 	margin: 1em ,2em;
 	border-radius:5px;
 	padding-left: 10px;
-	border-color: blue;
+	
 }
 .sg-form input[type="submit"]{
 	height: 40px;
 	width: 130px;
 	background:blue;
-	border:2px ;
-	border-radius: 30px;
+	border-radius: 5px;
 	color: white;
 	font-family: sans-serif;
 	cursor: pointer;
 }
 
 .fm{
+	margin-top: 5px;
+	top: 5px;
 	margin: 0 auto;
 	max-width: 500px;
+	box-sizing: border-box;
+	padding-top: 5px;
+	padding-bottom:10px;
+	margin: 5%;
+	text-align: center;
+	border-radius: 5px;
+	background-color: brown;
 }
 
 .snd{
@@ -156,13 +164,34 @@ h4{
 	text-align: center;
 	font-size: 30px;
 	font-style: italic;
-	color:blue;
+	color:green;
 }
 
 p{
 	font-family: Gill Sans Extrabold, serif;
 	font-style: bold;
-	font-size: 25px;
+	font-weight: bold;
+	font-size: 20px;
 
 }
 
+.msg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    background-color:green;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    border-radius: 5px;
+}
+
+.neg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto;
+    background-color:red;
+    display: block;
+    margin: 0 0 0 15px;
+    border-radius: 5px;
+
+}

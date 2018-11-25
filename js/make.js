@@ -24,13 +24,15 @@ function pstpd(e){
         if (data.status === 'pass'){
             window.location.href='product.html'
         }
+        else{
         let result = message(data);
-        let div = document.getElementById('send');
+        let div = document.getElementById('rec');
         div.innerHTML = result;
         setTimeout(()=>{
             result = '';
             div.innerHTML = result;
         },10000)
+    }
     })
     .catch(function(err){
         console.log(err)
@@ -41,6 +43,6 @@ function message(res){
     if(res.status === 'pass') {
         return`<h1 style='color:green'> product was created</h1>` 
     }else if(res.message === 'price cannot be negative' || 'By default category should be Household' || 'product already exists'){
-        return`<h1 style='color:red'>${res.message}</h1>'`
+        return`<h1 style='color:black'>${res.message}</h1>'`
     }
 }
