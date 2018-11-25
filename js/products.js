@@ -59,7 +59,7 @@ function prodInfo(){
         setTimeout(()=>{
             respns = '';
             div.innerHTML = respns;
-        },10000)
+        },8000)
         console.log(">>>>>>>>",data);
         const result = data.product;
         let pros = result.product_name;
@@ -115,13 +115,21 @@ function prodDelete(){
         let respns = message(data);
         let div = document.getElementById('rec');
         div.innerHTML = respns;
+        if(data.message === 'Un-authorized Access only Admin allowed'){
+             setTimeout(()=>{
+            respns = '';
+            div.innerHTML = respns;
+        },3000)
+        }
+        else{
         setTimeout(()=>{
             respns = '';
             div.innerHTML = respns;
-            window.location.href = window.location.href
+            window.location.reload();
         },3000)
         console.log(">>>>>>>>",data);
         const result = data.product;
+      }
 
     })
     .catch(function(err){
