@@ -12,10 +12,11 @@ window.onload = function getprods() {
             <table>
               <tr>
                 <th>Name</th>
-                <th>Descriptiom</th>
+                <th>Description</th>
                 <th>Price</th>
                 <th>Category</th>
-                <th>product_id</th>
+                <th>View</th>
+                <th>delete</th>
               </tr>
               ${products.map(
                 product =>
@@ -24,7 +25,8 @@ window.onload = function getprods() {
                   <td>${product.description}</td>
                   <td>${product.price}</td>
                   <td>${product.category_name}</td>
-                  <td>${product.product_id}</td>
+                  <td><button id='product_id' value=${product.product_id} onclick='prodInfo()' >View</button></td>
+                  <td><button id='product_id_del' value='${product.product_id}' onclick='prodDelete()' >delete</button></td>
                 </tr>`
               )}
             </table>
@@ -41,11 +43,9 @@ window.onload = function getprods() {
 };
 
 
-document.getElementById('product-info').addEventListener('click', prodInfo);
-
-function prodInfo(e){
-  const product_id = document.querySelector('input[type="tel"]').value;
-  console.log(product_id);
+function prodInfo(){
+  var product_id = document.getElementById('product_id').getAttribute('value');
+  console.log(">>>>>",product_id);
   fetch(`https://njeri.herokuapp.com/api/v2/products/${product_id}`,{
         headers:{
             Authorization: localStorage.getItem('token')
@@ -66,16 +66,16 @@ function prodInfo(e){
         console.log("idddddd",pros);
         ol = document.getElementById('send');
             let li = createNode('li'),
-                h5 = createNode('h5'),
                 h3 = createNode('h3'),
+                h5 = createNode('h5'),
                 h6 = createNode('h6'),
                 p = createNode('p');
-            h5.innerHTML  =`product description:${result.description}`;
             h3.innerHTML = `product name:${result.product_name}`;
+            h5.innerHTML  =`product description:${result.description}`;
             h6.innerHTML = `product Id:${result.product_id}`;
             p.innerHTML =`product price:${result.price}ksh`;
-            inject(li, h5);
             inject(li, h3);
+            inject(li, h5);
             inject(li, h6);
             inject(li, p);
             inject(ol, li);
@@ -84,9 +84,6 @@ function prodInfo(e){
     .catch(function(err){
         console.log(err)
     })
-
-
-  e.preventDefault();
 }
 
 function createNode(el){
@@ -98,11 +95,15 @@ function inject(p, c){
 }
 
 
-document.getElementById('product-delete').addEventListener('click', prodDel);
+function message(res){
+    return`<h2>${res.message}<h2>`
+}
 
-function prodDel(e){
-  const product_id = document.querySelector('input[type="tel"]').value;
-  console.log(product_id);
+
+
+function prodDelete(){
+  const product_id = document.getElementById('product_id_del').getAttribute('value');
+  console.log(">>>>>",product_id);
   fetch(`https://njeri.herokuapp.com/api/v2/products/${product_id}`,{
         method:'DELETE',
         headers:{
@@ -117,77 +118,14 @@ function prodDel(e){
         setTimeout(()=>{
             respns = '';
             div.innerHTML = respns;
-        },10000)
+            window.location.href = window.location.href
+        },3000)
         console.log(">>>>>>>>",data);
         const result = data.product;
-        let pros = result.product_name;
-        console.log("idddddd",pros);
+
     })
     .catch(function(err){
         console.log(err)
     })
 
-
-  e.preventDefault();
 }
-
-function createNode(el){
-    return document.createElement(el);
-}
-
-function inject(p, c){
-    return p.appendChild(c);
-}
-
-function message(res){
-    return`<h2>${res.message}<h2>`
-}
-
-
-
-document.getElementById('product-update').addEventListener('click', prodUpdt);
-
-function prodUpdt(e){
-  const product_id = document.querySelector('input[type="tel"]').value;
-  console.log(product_id);
-  fetch(`https://njeri.herokuapp.com/api/v2/products/${product_id}`,{
-        method:'PUT',
-        headers:{
-            Authorization: localStorage.getItem('token')
-        }
-    })
-  .then((res) => res.json())
-  .then(function (data) {
-        let respns = message(data);
-        let div = document.getElementById('next');
-        div.innerHTML = respns;
-        setTimeout(()=>{
-            respns = '';
-            div.innerHTML = respns;
-        },10000)
-        console.log(">>>>>>>>",data);
-        const result = data;
-        console.log(">>>>>>>NEW",result);
-  
-    })
-    .catch(function(err){
-        console.log(err)
-    })
-
-
-  e.preventDefault();
-}
-
-function createNode(el){
-    return document.createElement(el);
-}
-
-function inject(p, c){
-    return p.appendChild(c);
-}
-
-function message(res){
-    return`<h2>${res.message}<h2>`
-}
-
-

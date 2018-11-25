@@ -136,13 +136,15 @@ table {
 }
 
 td, th {
-    border: 1px solid #dddddd;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border: 1px solid #ddd;
     text-align: left;
     padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+   
+    background-color: #f2f2f2;
 }
 
 .button {
@@ -166,4 +168,38 @@ input[type=tel], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+#product_id{
+	background-color: #4CAF50;
+	border-radius: 4px;
+	width: 50%;
+	cursor: pointer;
+
+	} /* Green */
+
+#product_id_del{
+	background-color: #f44336;
+	border-radius: 4px;
+	width: 50%;
+	cursor: pointer;
+	} /* Red */ 
+
+.msg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    background-color:green;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    border-radius: 5px;
+}
+.del {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color:red;
+    display: inline-block;
+     margin: 0 0 0 10px;
 }
