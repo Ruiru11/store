@@ -25,13 +25,12 @@ window.onload = function getprods() {
                   <td>${product.description}</td>
                   <td>${product.price}</td>
                   <td>${product.category_name}</td>
-                  <td><button id='product_id' value=${product.product_id} onclick='prodInfo()' >View</button></td>
-                  <td><button id='product_id_del' value='${product.product_id}' onclick='prodDelete()' >delete</button></td>
+                  <td><button id='product_id' value=${product.product_id} onclick='prodInfo(this)' >View</button></td>
+                  <td><button id='product_id_del' value='${product.product_id}' onclick='prodDelete(this)' >delete</button></td>
                 </tr>`
               )}
             </table>
-          </div>`;
-
+          </div>`; 
       (body = document.getElementsByTagName("body")[0]),
       (div = document.createElement("div"));
       div.innerHTML = productTable;
@@ -43,8 +42,8 @@ window.onload = function getprods() {
 };
 
 
-function prodInfo(){
-  var product_id = document.getElementById('product_id').getAttribute('value');
+function prodInfo(elmnt){
+  var product_id = elmnt.value;
   console.log(">>>>>",product_id);
   fetch(`https://njeri.herokuapp.com/api/v2/products/${product_id}`,{
         headers:{
@@ -101,8 +100,8 @@ function message(res){
 
 
 
-function prodDelete(){
-  const product_id = document.getElementById('product_id_del').getAttribute('value');
+function prodDelete(elmnt){
+  const product_id = elmnt.value;
   console.log(">>>>>",product_id);
   fetch(`https://njeri.herokuapp.com/api/v2/products/${product_id}`,{
         method:'DELETE',

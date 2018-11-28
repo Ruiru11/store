@@ -30,7 +30,7 @@ window.onload = function getusers() {
                   <h1>${user.user_email}</h1>
                   <h4>User_id:${user.user_id}</h4>
                   <h3>User_role:${user.user_role}</h3>
-                  <p><button>Contact</button></p>
+                  <p><button id="user" value=`+user.user_id+` onclick="updateUser()">Update user role</button></p>
                   </div>`
               )}
           </div>`;
@@ -52,3 +52,8 @@ function message(res){
     return`<h2>${res.message}<h2>`
 }
 
+
+function updateUser(){
+  const user_id = document.getElementById('user').getAttribute('value');
+  console.log(">>>>>",user_id);
+}
