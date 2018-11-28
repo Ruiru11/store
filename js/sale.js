@@ -82,3 +82,7 @@ window.onload = function getsales(){
 function message(res){
     return`<h2>${res.message}<h2>`
 }
+
+
+
+
